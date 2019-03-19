@@ -1,0 +1,198 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,700');
+
+//variables
+$text-black: #2c2e30;
+$text-dark-gray: #54565a;
+$text-gray: #7e8085;
+$text-pink: #fc6dab;
+
+$border-gray:#e7eaee;
+
+//variables
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+$text-size: (
+    title: (
+        font-size: 3.4em,
+        font-weight: 700
+    ),
+    sub-title: (
+        font-size: 2.4em,
+        font-weight: 700
+    ),
+    big-text: (
+        font-size: 4.8em,
+        font-weight: 700
+    ),
+    text16: (
+        font-size: 1.6em,
+        font-weight: 400  
+    ),
+    text18: (
+        font-size: 1.8em,
+        font-weight: 400  
+    ),
+    text28: (
+        font-size: 2.8em,
+        font-weight: 700  
+    )
+);
+
+@mixin text($type) {
+    font-size: map-deep-get($text-size, $type, 'font-size');
+    font-weight: map-deep-get($text-size, $type, 'font-weight')
+}
+
+body {
+    font: 400 10px 'Rubik', sans-serif;
+    color: $text-black;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,p,ul,li {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+.no-margin {
+    margin: 0!important
+}
+
+.main {
+    &-content {
+        max-width: 1200px;
+        width: calc(100% - 30px);
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+//Header
+.header {
+    position: relative;
+    height: 80vh;
+    background: linear-gradient(250deg, #ffcfbb 0%, #fc6dab 100%);
+    overflow: hidden;
+    &-bg {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background: transparent url('./img//header-bg.svg') no-repeat center;
+        background-size: 37%;
+        z-index: 1;
+    }
+}
+
+//Content
+.content {
+    border-bottom: 1px solid $border-gray;
+    padding-bottom: 50px;
+    margin-bottom: 90px;
+
+    &-title {
+        @include text(title);
+        color: $text-black;
+        text-align: center;
+        margin-bottom: 90px;
+    }
+
+    &-sub-title {
+        max-width: 90%;
+        @include text(text18);
+        line-height: 34px;
+        color: $text-gray;
+        text-align: center;
+        margin: 20px auto 90px;
+    }
+
+    &-area {
+        display: flex;
+        justify-content: space-around;
+
+        &--block {
+            width: calc((100% - 15px)/3);
+            max-width: 340px;
+        }
+
+        h4 {
+            @include text(sub-title);
+            color: $text-black;
+            margin-bottom: 24px;
+            span {
+                font-size: 16px;
+                color: $text-gray;
+            }
+        }
+
+        p {
+            @include text(text16);
+            line-height: 28px;
+            color: $text-dark-gray;
+            &.big-text {  
+                display: flex;   
+                line-height: 48px;
+                margin-bottom: 24px;           
+                span {
+                    display: block;
+                    &:first-child {
+                        font-size: 48px;
+                        font-weight: 700;
+                        color: $text-black;
+                        margin-right: 5px;
+                    }
+                    &:last-child {
+                        font-size: 16px;
+                        color: $text-gray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//help area
+.tab-menu {    
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-gray;
+    li {
+        position: relative;
+        padding-bottom: 24px;
+    }
+}
+
+//Footer
+.footer {
+    &-form {
+        height: calc(100vh - 76px);
+        width: 100%;
+        background: transparent url('./img/footer.svg') no-repeat center;
+        background-size: cover;
+    }
+    &-link {
+        display: flex;
+        justify-content: center;
+        height: 76px;
+        width: 100%;
+        background-color: #f9f6f8;
+        a {
+            display: flex;
+            align-items: center;
+            @include text(text16);
+            color: inherit;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 20px
+        }
+    }
+}
