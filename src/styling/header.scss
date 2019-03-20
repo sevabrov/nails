@@ -1,14 +1,24 @@
 .header {
-    position: relative;
-    height: 80vh;
-    background: linear-gradient(250deg, #ffcfbb 0%, #fc6dab 100%);
-    overflow: hidden;
-    &-bg {
-        position: absolute;
-        height: 100vh;
-        width: 100%;
-        background: transparent url('./img//header-bg.svg') no-repeat center;
-        background-size: 37%;
-        z-index: 1;
+    height: 100vh;
+    width: 100%;
+    background: #fc6dab;
+    background-image: url('./img//header-bg.svg'); /* fallback */
+    background-image: url('./img//header-bg.svg'), linear-gradient(250deg, #ffcfbb 0%, #fc6dab 100%); /* W3C */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 105%;
+    margin-bottom: 90px;
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        margin-bottom: 18vh;
+    }
+    &-title {        
+        width: 70%;
+        @include text(text48);
+        color: #fff;
+        margin-bottom: 30px
     }
 }

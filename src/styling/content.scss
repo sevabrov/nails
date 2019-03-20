@@ -29,12 +29,35 @@
         }
 
         h4 {
+            display: flex;
+            align-items: center;
             @include text(sub-title);
             color: $text-black;
             margin-bottom: 24px;
-            span {
-                font-size: 16px;
-                color: $text-gray;
+            &:before {
+                content: '';
+                display: block;
+                height: 35px;
+                width: 35px;   
+                margin-right: 20px;             
+            }
+            &.more-clients {
+                &:before {
+                    background: transparent url('./img/client-icon.svg') no-repeat center;
+                    background-size: contain;
+                }
+            }
+            &.business-creating {
+                &:before {
+                    background: transparent url('./img/buiness-icon.svg') no-repeat center;
+                    background-size: contain;
+                }
+            }
+            &.feedback-communication {
+                &:before {
+                    background: transparent url('./img/feedback-icon.svg') no-repeat center;
+                    background-size: contain;
+                }
             }
         }
 

@@ -1,10 +1,29 @@
 .footer {
     &-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: calc(100vh - 76px);
         width: 100%;
         background: transparent url('./img/footer.svg') no-repeat center;
         background-size: cover;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .input-desc {        
+            text-align: center;
+            padding: 0 20px;
+        }
     }
+    &-title {
+        @include text(title);
+        color: #fff;
+        margin-bottom: 30px;
+    }    
     &-link {
         display: flex;
         justify-content: center;
