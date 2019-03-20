@@ -9,9 +9,9 @@ const Help = () => {
                     публичных выступлений в домашних условиях.</h5>
 
                 <ul className="tab-menu">
-                    <li>Обучение</li>
-                    <li>Обратная связь</li>
-                    <li>Будь свободным</li>
+                    <li className="study-menu active">Обучение</li>
+                    <li className="feedback-menu">Обратная связь</li>
+                    <li  className="free-menu">Будь свободным</li>
                 </ul>
                 
             </div>
