@@ -1,0 +1,35 @@
+.review-block {
+    height: 220px;
+    width: 90%;
+    max-width: 340px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid $border-gray;
+    box-shadow: 0 2px 6px rgba(44, 46, 48, 0.07);
+    &-text {
+        height: calc(100% - 44px);
+        @include text(text16); 
+        line-height: 28px;
+        color: $text-dark-gray;
+        font-style: italic;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    &-user {
+        display: flex;
+        align-items: center;
+        img {
+            height: 34px;
+            width: 34px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: none;
+        }
+        p {
+            @include text(text16); 
+
+            color: $text-black;
+        }
+    }
+}

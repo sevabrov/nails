@@ -1,0 +1,50 @@
+$text-black: #2c2e30;
+$text-dark-gray: #54565a;
+$text-gray: #7e8085;
+$text-pink: #fc6dab;
+
+$border-gray:#e7eaee;
+
+//variables
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+$text-size: (
+    title: (
+        font-size: 3.4em,
+        font-weight: 700
+    ),
+    sub-title: (
+        font-size: 2.4em,
+        font-weight: 700
+    ),
+    big-text: (
+        font-size: 4.8em,
+        font-weight: 700
+    ),
+    text16: (
+        font-size: 1.6em,
+        font-weight: 400  
+    ),
+    text18: (
+        font-size: 1.8em,
+        font-weight: 400  
+    ),
+    text21: (
+        font-size: 2.1em,
+        font-weight: 700  
+    ),
+    text28: (
+        font-size: 2.8em,
+        font-weight: 700  
+    )
+);
+
+@mixin text($type) {
+    font-size: map-deep-get($text-size, $type, 'font-size');
+    font-weight: map-deep-get($text-size, $type, 'font-weight')
+}

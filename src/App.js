@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="main">
-        {/* <Header/> */}
+        <Header/>
         <div className="main-content">
           <What/>
           <Masters/>
