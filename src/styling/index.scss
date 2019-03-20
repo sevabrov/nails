@@ -78,6 +78,11 @@ li {
         width: calc(100% - 30px);
         padding: 0 15px;
         margin: 0 auto;
+        .content {
+            &:last-child {
+                border-bottom: none;
+            }
+        }
     }
 }
 
@@ -165,44 +170,47 @@ li {
 }
 
 //help area
-.tab-menu {    
-    display: flex;
-    justify-content: space-between;
+.tab-menu {        
     width: 90%;
     margin: 0 auto;
-    border-bottom: 2px solid $border-gray;
-    li {
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        @include text(text21);
-        padding: 0 20px 24px;
-        cursor: pointer;
-        &:before {
-            content: '';
-            height: 50px;
-            width: 50px;
-        }
-        &:after {
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            content: '';
-            width: 100%;
-            height: 2px;
-            background-color: #2f5bea;
-            transform: scale(0);
-            transition: all 0.3s;
-        }
-        &.active,
-        &:hover {
+    .react-tabs__tab-list {        
+        display: flex;
+        justify-content: space-between;
+        margin-bottom:60px;
+        border-bottom: 2px solid $border-gray;
+        li {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            @include text(text21);
+            padding: 0 20px 24px;
+            cursor: pointer;
+            &:before {
+                content: '';
+                height: 50px;
+                width: 50px;
+            }
             &:after {
-                transform: scale(1);
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: #2f5bea;
+                transform: scale(0);
                 transition: all 0.3s;
             }
+            &.react-tabs__tab--selected,
+            &:hover {
+                &:after {
+                    transform: scale(1);
+                    transition: all 0.3s;
+                }
+            }
         }
-    }
+    }    
 }
 
 .study-menu {
@@ -218,6 +226,89 @@ li {
 .free-menu {
     &:before {
       background: transparent url('./img/free.svg') no-repeat center;  
+    }
+}
+
+.tab-content {
+    background: transparent url('./img/woman.svg') no-repeat 10%;
+    background-size: contain;
+    padding: 40px 0 0 50%;
+    &-title {
+        @include text(text28);
+        margin-bottom: 35px;
+    }
+    ul {       
+        @include text(text16); 
+        line-height: 28px;
+        color: $text-dark-gray;
+        border-bottom: 1px solid $border-gray;
+        margin-bottom: 20px;
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            &:before {
+                position: absolute;
+                top: 7px;
+                left: 0;
+                content: '';
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                background-color: #f8d3e3;
+            }
+        }
+    }
+    &-feedback {
+        p {                
+            @include text(text16); 
+            line-height: 28px;
+            color: $text-dark-gray;
+            &:first-child {
+                font-style: italic;
+                margin-bottom: 30px
+            }
+            &:last-child {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+//review content
+.review-block {
+    height: 220px;
+    width: 90%;
+    max-width: 340px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid $border-gray;
+    box-shadow: 0 2px 6px rgba(44, 46, 48, 0.07);
+    &-text {
+        height: calc(100% - 44px);
+        @include text(text16); 
+        line-height: 28px;
+        color: $text-dark-gray;
+        font-style: italic;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    &-user {
+        display: flex;
+        align-items: center;
+        img {
+            height: 34px;
+            width: 34px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: none;
+        }
+        p {
+            @include text(text16); 
+
+            color: $text-black;
+        }
     }
 }
 
