@@ -11,10 +11,10 @@ class Review extends Component {
     
     render() {
         const settings = {
-            dots: false,
+            dots: true,
             arrows: false,
             infinite: true,
-            autoplay: false,
+            autoplay: true,
             speed: 500,
             slidesToShow: 3,
             slidesToScroll: 1
