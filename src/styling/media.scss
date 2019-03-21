@@ -22,15 +22,37 @@ $s: 650px;
     }
 }
 @media screen and (max-width: $m) {
+    .header {
+        background: linear-gradient(250deg, #ffcfbb 0%, #fc6dab 100%);
+        &-title {
+            width: 100%;
+            font-size: 34px;
+        }
+    }
     .input {
         height: 60px;
         max-width: 420px;
+    }
+    .content {
+        &-title {
+            font-size: 30px;
+        }
+    }
+    .tab-content {
+        background-size: 40%;
+        background-position: 0 0;
+        padding-left: 0;
+        &-title,
+        ul {
+            padding-left: 40%;
+        }
     }
 }
 @media screen and (max-width: $s) {
     .content {
         &-sub-title {
-            font-size: 14px;
+            font-size: 16px;
+            line-height: 24px;
         }
         &-area {
             p.big-text {
@@ -49,6 +71,20 @@ $s: 650px;
                 text-align: center;
                 margin-bottom: 60px;
             }
+        }
+    }
+    .tab-menu {
+        .react-tabs__tab-list {
+            li {
+                font-size: 0;
+                padding-bottom: 10px
+            }
+        }
+    }
+    .footer-link {
+        a {
+            font-size: 14px;
+            padding: 10px;
         }
     }
 }
