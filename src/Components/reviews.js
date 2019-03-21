@@ -17,8 +17,22 @@ class Review extends Component {
             autoplay: true,
             speed: 500,
             slidesToShow: 3,
-            slidesToScroll: 1
-          };
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 978,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+            ]
+        };
 
           return (
             <div className="content">

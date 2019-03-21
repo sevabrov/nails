@@ -1,0 +1,54 @@
+//size
+$l: 1199px;
+$m: 978px;
+$s: 650px;
+
+@media screen and (max-width: $l) {
+    .content {
+        margin-bottom: 45px;
+        &-title,
+        &-sub-title {
+            margin-bottom: 45px;
+        }
+        &-area--block {
+            width: 50%;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .review-block {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: $m) {
+    .input {
+        height: 60px;
+        max-width: 420px;
+    }
+}
+@media screen and (max-width: $s) {
+    .content {
+        &-sub-title {
+            font-size: 14px;
+        }
+        &-area {
+            p.big-text {
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 12px;
+                span {
+                    &:first-child {
+                        font-size: 34px;
+                        line-height: 34px;
+                    }
+                }
+            }
+            &--block {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
