@@ -23,6 +23,10 @@ li {
     margin: 0!important
 }
 
+.mob-view {
+    display: none!important;
+}
+
 .start-btn {
     width: auto;
     background-color: #fff;
@@ -70,7 +74,7 @@ li {
         font-size: 1.3em;
         line-height: 21px;
         color: #fff;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
 

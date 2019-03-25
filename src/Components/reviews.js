@@ -37,7 +37,7 @@ class Review extends Component {
           return (
             <div className="content">
                 <h3 className="content-title no-margin">Вы в хороших руках</h3>
-                <h5 className="content-sub-title">Millions of people around the world have already made xPider the<br/> place where their dream happens.</h5>
+                <h5 className="content-sub-title">У нас размещаются только реальные отзывы пользователей системы</h5>
                 <Slider {...settings}>
                 <div className="review-area">
                     <div className="review-block">

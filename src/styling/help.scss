@@ -85,6 +85,20 @@
                 border-radius: 50%;
                 background-color: #f8d3e3;
             }
+            span {
+                position: relative;
+                display: block;
+                padding-left: 20px;
+                &:before {
+                    position: absolute;
+                    top: 12px;
+                    left: 0;
+                    content: '';
+                    width: 7px;
+                    height: 3px;
+                    background-color: #f8d3e3;
+                }
+            }
         }
     }
     &-feedback {

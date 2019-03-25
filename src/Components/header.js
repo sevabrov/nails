@@ -12,10 +12,11 @@ const Header = (props) => {
         <div className="header">
             <div className="main-content">
                 <div className="header-top">
-                    <img src={logo} alt="logo"/>
+                    <img className="logo" src={logo} alt="logo"/>
                     <button className="start-btn">Начать сейчас</button>
                 </div>
-                <h1 className="header-title">Зарабатывай вместе с лучшими мастерами бьюти индустрии</h1>
+                <h1 className="header-title">Зарабатывай на клиентах, получай реальные отзывы и будь в курсе всех новинок Бьюти индустрии вместе с L&B.</h1>
+                <h1 className="header-title mob-view">Зарабатывай на клиентах вместе с L&B.</h1>
                 <p className="input-text">Нам доверяют более 200 000 экспертов по всему миру</p>
                 <form onSubmit={sendEmail}>
                     <div className="input">
@@ -23,7 +24,7 @@ const Header = (props) => {
                         <button className="start-btn">Начать Сейчас</button>
                     </div>
                 </form>
-                <p className="input-desc">Это абсолютно бесплатно, стань первым кто присоедениться к большой семье мастеров.  Никакого спама на вашу почту.</p>
+                <p className="input-desc">Мы не передаём вашу почту третьим лицам и не рассылаем спам</p>
             </div>            
         </div>
     );

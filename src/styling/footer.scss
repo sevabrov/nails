@@ -25,11 +25,14 @@
         margin-bottom: 30px;
     }    
     &-link {
-        display: flex;
-        justify-content: center;
         height: 76px;
         width: 100%;
         background-color: #f9f6f8;
+        .main-content {            
+            display: flex;
+            justify-content: center;
+            height: 100%;
+        }
         a {
             display: flex;
             align-items: center;
