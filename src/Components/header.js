@@ -13,7 +13,6 @@ const Header = (props) => {
             <div className="main-content">
                 <div className="header-top">
                     <img className="logo" src={logo} alt="logo"/>
-                    <button className="start-btn">Начать сейчас</button>
                 </div>
                 <h1 className="header-title">Зарабатывай на клиентах, получай реальные отзывы и будь в курсе всех новинок Бьюти индустрии вместе с L&B.</h1>
                 <h1 className="header-title mob-view">Зарабатывай на клиентах вместе с L&B.</h1>
