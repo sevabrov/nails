@@ -58,8 +58,18 @@
 }
 
 .tab-content {
-    background: transparent url('./img/woman.svg') no-repeat 10%;
-    background-size: contain;
+    &.timeline {        
+        background: transparent url('./img/timeline-bg.svg') no-repeat 0 0;
+        background-size: 45%;
+    }
+    &.price {        
+        background: transparent url('./img/price-bg.svg') no-repeat 0 0;
+        background-size: 45%;
+    }
+    &.be-free {        
+        background: transparent url('./img/befree-bg.svg') no-repeat 0 0;
+        background-size: 45%;
+    }
     padding: 40px 0 0 50%;
     &-title {
         @include text(text28);

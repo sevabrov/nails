@@ -62,6 +62,11 @@ $s: 650px;
         background-size: 40%;
         background-position: 0 0;
         padding-left: 0;
+        &.timeline,
+        &.price,
+        &.be-free {        
+            background-size: 35%;
+        }
         &-title,
         ul {
             padding-left: 40%;
@@ -142,12 +147,19 @@ $s: 650px;
                 }
             }
         }
-        &-content {
-            background: transparent;
+        &-content {            
+            &.timeline,
+            &.price,
+            &.be-free {        
+                background-position: 100% 85%;
+            }
             padding-top: 0;
             &-title,
             ul {
                 padding-left: 0;
+            }
+            &-feedback {
+                padding-right: 30%;
             }
         }
     }

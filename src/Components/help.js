@@ -19,7 +19,7 @@ class Help extends Component {
                     </TabList>
 
                     <TabPanel>
-                        <div className="tab-content">
+                        <div className="tab-content timeline">
                             <p  className="tab-content-title">Принимай клиентов в удобное для себя время</p>
                             <ul>
                                 <li>Мы не навязываем никаких сроков по вашей минимальной занятости. Вы можете блокировать все неудобные для вас даты.</li>
@@ -34,7 +34,7 @@ class Help extends Component {
                         </div>
                     </TabPanel>
                     <TabPanel>
-                        <div className="tab-content">
+                        <div className="tab-content price">
                             <p className="tab-content-title">Устанавливай свои цены</p>
                             <ul>
                                 <li>Вы сами устанавливаете ваш прайс лист, но в любой момент вы можете обратиться к нашему инструменту.</li>
@@ -51,7 +51,7 @@ class Help extends Component {
                         </div>
                     </TabPanel>
                     <TabPanel>
-                    <div className="tab-content">
+                    <div className="tab-content be-free">
                             <p  className="tab-content-title">Ваш кабинет - ваши правила</p>
                             <ul>
                                 <li>Для управления ожиданиями можно добавить правила кабинета.</li>
