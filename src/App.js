@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 //components
 import Header from './Components/header';
 import What from './Components/what';
-import Masters from './Components/masters';
+import About from './Components/about';
 import Help from './Components/help';
 import Reviews from './Components/reviews';
 import Footer from './Components/footer';
@@ -17,8 +17,8 @@ class App extends Component {
       <div className="main">
         <Header/>
         <div className="main-content">
-          <What/>
-          <Masters/>
+          <About/>
+          <What/>          
           <Help/>
           <Reviews/>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Masters = () => {
+const About = () => {
     return (
             <div className="content">
-                <h3 className="content-title">Мастера по всему миру</h3>
+                <h3 className="content-title">Что такое L&B</h3>
                 <div className="content-area">
                     <div className="content-area--block">
                         <p className="big-text">
@@ -31,4 +31,4 @@ const Masters = () => {
     );
 }
 
-export default Masters;
+export default About;

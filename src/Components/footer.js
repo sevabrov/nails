@@ -24,7 +24,6 @@ const Footer = () => {
                     <div className="main-content">
                         <a href="/">Главная</a>
                         <a href="/">Пользовательское соглашение</a>
-                        <a href="/">Обратная связь</a>
                     </div>
                 </div>
             </div>
