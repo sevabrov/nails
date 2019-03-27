@@ -63,6 +63,16 @@ a {
     height: 75px;
     width: 100%;
     max-width: 520px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.4s;
+    &.error {
+        border-color: #FF4965;
+        transition: all 0.4s;
+        input {
+            color: #FF4965;
+        }
+    }
     input {
         height: 100%;
         width: 100%;
@@ -124,6 +134,9 @@ a {
 
 //Footer
 @import './footer.scss';
+
+//Popup
+@import './popup.scss';
 
 //@media
 @import './media.scss'

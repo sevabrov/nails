@@ -1,0 +1,37 @@
+.modal {
+    &-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255,255,255,0.97);
+        z-index: 10;
+    }    
+    &-area {
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        color: $text-dark-gray;
+        text-align: center;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 1px $border-gray;
+    }
+    &-title {
+        @include text(text28);
+        margin-bottom: 20px;
+    }
+    &-text {
+        @include text(text16);
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    &-footer {
+        @include text(text21);
+        line-height: 20px;
+    }
+}
