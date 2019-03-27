@@ -3,6 +3,15 @@ $l: 1199px;
 $m: 978px;
 $s: 650px;
 
+@media screen and (max-width: 1400px) {
+    .slider-block {
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
+
 @media screen and (max-width: $l) {
     .header {
         height: auto;

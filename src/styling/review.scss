@@ -1,3 +1,29 @@
+.slider-block {
+    * {
+        background-color: #fff;
+        z-index: 2;
+    }
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        z-index: 1;
+    }
+    &:before {
+        top: 25px;
+        left: -80px;
+        background: transparent url('./img/dots-bg.svg') no-repeat center;
+        background-size: contain;
+    }
+    &:after {
+        bottom: 25px;
+        right: -80px;
+        background: transparent url('./img/curve-bg.svg') no-repeat center;
+        background-size: contain;
+    }
+}
 .review-block {
     height: 220px;
     width: 90%;

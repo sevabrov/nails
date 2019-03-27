@@ -1,10 +1,10 @@
 .header {
     height: 100vh;
-    min-height: 510px;
+    min-height: 600px;
     width: 100%;
     background: #fc6dab;
-    background-image: url('./img//header-bg1.svg'); /* fallback */
-    background-image: url('./img//header-bg1.svg'), linear-gradient(250deg, #ffcfbb 0%, #fc6dab 100%); /* W3C */
+    background-image: url('./img/header-bg.svg'); /* fallback */
+    background-image: url('./img/header-bg.svg'), linear-gradient(250deg, #ffcfbb 0%, #fc6dab 100%); /* W3C */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 100%;

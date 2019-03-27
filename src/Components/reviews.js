@@ -53,7 +53,7 @@ class Review extends Component {
             arrows: false,
             infinite: true,
             autoplay: true,
-            speed: 500,
+            speed: 800,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
@@ -76,7 +76,7 @@ class Review extends Component {
             <div className="content">
                 <h3 className="content-title no-margin">Вы в хороших руках</h3>
                 <h5 className="content-sub-title">У нас размещаются только реальные отзывы пользователей системы</h5>
-                <Slider {...settings}>
+                <Slider className="slider-block" {...settings}>
                 {this.feedback.map((item, index) => {
                     return (
                         <div className="review-area" key={index}>
