@@ -1,7 +1,7 @@
 //size
 $l: 1199px;
 $m: 978px;
-$s: 650px;
+$s: 670px;
 
 @media screen and (max-width: 1400px) {
     .slider-block {
@@ -59,6 +59,21 @@ $s: 650px;
             font-size: 3em;
         }
         &-area {
+            .animated {
+                &:nth-child(2) {
+                    text-align: right;
+                    p {
+                        justify-content: flex-end;
+                    }
+
+                }
+                &:last-child {
+                    text-align: center;
+                    p {
+                        justify-content: center;
+                    }
+                }
+            }
             p.big-text {
                 span {
                     &:first-child {
@@ -66,6 +81,13 @@ $s: 650px;
                     }
                 }
             }
+        }
+    }
+    .business-creating-area {
+        width: 100%;
+        max-width: 100%;
+        h4 {
+            justify-content: center;
         }
     }
     .tab-content {
@@ -130,6 +152,15 @@ $s: 650px;
             line-height: 24px;
         }
         &-area {
+            .animated {
+                &:nth-child(2) {
+                    text-align: center;
+                    p {
+                        justify-content: center;
+                    }
+
+                }
+            }
             p.big-text {
                 justify-content: center;
                 align-items: center;
@@ -137,6 +168,7 @@ $s: 650px;
             }
             &--block {
                 width: 100%;
+                max-width: 100%;
                 font-size: 9px;
                 text-align: center;
                 margin-bottom: 60px;

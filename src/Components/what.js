@@ -23,7 +23,7 @@ const What = () => {
                         </div>   
                     </ScrollAnimation>     
                     <ScrollAnimation animateIn="bounceInUp" animateOnce={true} delay={300}>
-                        <div className="content-area--block">
+                        <div className="content-area--block business-creating-area">
                             <h4 className="business-creating">Проверенные клиентов</h4>
                             <p>Перед бронированием посетители должны предоставить определенную информацию о себе, например подтвержденный номер 
                                 телефона и электронный адрес, в качестве других мер безопасности, вы можете установить условие, чтоб у клиентов 
