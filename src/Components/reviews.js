@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
-//add slick slider
-import Slider from "react-slick";//add slick slider
+import ScrollAnimation from 'react-animate-on-scroll';
 
+//add slick slider
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 class Review extends Component {
 
     feedback = [
@@ -74,23 +76,25 @@ class Review extends Component {
 
           return (
             <div className="content">
-                <h3 className="content-title no-margin">Вы в хороших руках</h3>
-                <h5 className="content-sub-title">У нас размещаются только реальные отзывы пользователей системы</h5>
-                <Slider className="slider-block" {...settings}>
-                {this.feedback.map((item, index) => {
-                    return (
-                        <div className="review-area" key={index}>
-                            <div className="review-block">
-                                <p className="review-block-text">{item.text}</p>
-                                <a href={item.link} target="_blank" rel="noopener noreferrer" className="review-block-user">
-                                    <img src={item.ava ? item.ava : 'img/default-avatar.svg'} alt={item.name}/>
-                                    <p>{item.name}</p>
-                                </a>                        
-                            </div>
-                        </div> 
-                    )
-                })}
-                </Slider>
+                <ScrollAnimation animateIn="zoomIn" animateOnce={true} delay={200}>
+                    <h3 className="content-title no-margin">Вы в хороших руках</h3>
+                    <h5 className="content-sub-title">У нас размещаются только реальные отзывы пользователей системы</h5>
+                    <Slider className="slider-block" {...settings}>
+                    {this.feedback.map((item, index) => {
+                        return (
+                            <div className="review-area" key={index}>
+                                <div className="review-block">
+                                    <p className="review-block-text">{item.text}</p>
+                                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="review-block-user">
+                                        <img src={item.ava ? item.ava : 'img/default-avatar.svg'} alt={item.name}/>
+                                        <p>{item.name}</p>
+                                    </a>                        
+                                </div>
+                            </div> 
+                        )
+                    })}
+                    </Slider>
+                </ScrollAnimation>
             </div>
     );
     }    

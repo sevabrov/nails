@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+
+//animation
+import "animate.css/animate.min.css";
+
 //components
 import Header from './Components/header';
 import What from './Components/what';

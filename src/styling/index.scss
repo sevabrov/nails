@@ -4,6 +4,7 @@
 //variables
 @import './variables.scss';
 
+
 body {
     font: 400 10px 'Rubik', sans-serif;
     color: $text-black;
@@ -112,6 +113,7 @@ a {
         width: calc(100% - 30px);
         padding: 0 15px;
         margin: 0 auto;
+        overflow: hidden;
         .content {
             &:last-child {
                 border-bottom: none;
