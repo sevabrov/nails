@@ -3,7 +3,7 @@ import SendEmail from './HOC/sendEmail';
 
 import ScrollAnimation from 'react-animate-on-scroll';
 
-const Footer = () => {
+const Footer = ({handlePopUp}) => {
 
     return (
             <div className="footer">
@@ -13,7 +13,8 @@ const Footer = () => {
                             <SendEmail 
                                 position = "footer"
                                 title = "Зарабатывай вместе с нами !"
-                                inputDesc = "Это абсолютно бесплатно, стань первым кто присоедениться к большой семье мастеров. Никакого спама на вашу почту."
+                                inputDesc = "Это абсолютно бесплатно, стань первым кто присоедениться к большой семье мастеров. Никакого спама на вашу почту."                                
+                                handlePopUp = {handlePopUp}
                             />
                         </ScrollAnimation>
                     </div>

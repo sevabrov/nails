@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
 import axios from "axios";
 
-import PopUp from './popUp';
-
 class SendEmail extends Component {     
 
     state = {
         email: '',
-        emailError: false,
-        popUp: false        
+        emailError: false
     }
 
     handleEmail = (e) => {
@@ -18,27 +15,10 @@ class SendEmail extends Component {
     }
 
     handleError = (item) => {
-        item === true 
-            ? this.setState({
-                email: 'Неверно указан email',
-                emailError: item
-            })
-            : this.setState({
-                email: '',
-                emailError: item
-            })  
-              
-    }
-
-    handlePopUp = () => {
         this.setState({
-            popUp: true
-        })
-        setTimeout(()=> {
-            this.setState({
-                popUp: false
-            })
-        }, 3000)        
+            emailError: item
+        }) 
+              
     }
 
     sendEmail = (e)=> {
@@ -47,7 +27,7 @@ class SendEmail extends Component {
             axios.get('http://ip-api.com/json')
             .then(
                 response => {
-                    this.handlePopUp();
+                    this.props.handlePopUp();
                     console.log(this.state.email,response.data.query,response.data.city)
                 }, 
                 error => {
@@ -63,14 +43,13 @@ class SendEmail extends Component {
     render() {
         const {position, inputDesc, title, mobileView} = this.props;
         return(
-            <form onSubmit={this.sendEmail}>                
-                {this.state.popUp ? <PopUp/> : null}
+            <form onSubmit={this.sendEmail}>         
                 <h1 className={`${position}-title`}>{title}</h1>
                 {mobileView ? <h1 className="header-title mob-view">Зарабатывай на клиентах вместе с L&B.</h1> : null}
                 {/* <p className="input-text">Нам доверяют более 200 000 экспертов по всему миру</p> */}
                 <div className={`input ${this.state.emailError ? 'error' : ''}`}>
-                    <input type="text" value={this.state.email} onChange={this.handleEmail} placeholder="Оставьте ваш e-mail"/>
-                    <button onBlur={()=>this.handleError(false)} className="start-btn">Начать Сейчас</button>
+                    <input type="text" value={this.state.email} onBlur={()=> this.state.emailError ? this.handleError(false) : null} onChange={this.handleEmail} placeholder="Оставьте ваш e-mail"/>
+                    <button className="start-btn">Начать Сейчас</button>
                 </div>
                 <p className="input-desc">{inputDesc}</p>
             </form>

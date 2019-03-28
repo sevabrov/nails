@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import logo from '../styling/img/logo.png';
 
-const Header =() => {  
+const Header =({handlePopUp}) => {  
 
     return (
         <div className="header">
@@ -19,6 +19,7 @@ const Header =() => {
                         title = "Зарабатывай на клиентах, получай реальные отзывы и будь в курсе всех новинок Бьюти индустрии вместе с L&B."
                         inputDesc = "Мы не передаём вашу почту третьим лицам и не рассылаем спам"
                         mobileView = {true}
+                        handlePopUp = {handlePopUp}
                     />
                 </ScrollAnimation>
             </div>            
