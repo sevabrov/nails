@@ -8,6 +8,9 @@
         color: $text-black;
         text-align: center;
         margin-bottom: 90px;
+        &.small-margin {
+            margin-bottom: 60px;
+        }
     }
 
     &-sub-title {
@@ -23,6 +26,11 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        &.about {
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+        }
 
         &--block {
             width: 100%;
@@ -68,24 +76,6 @@
             @include text(text16);
             line-height: 28px;
             color: $text-dark-gray;
-            &.big-text {  
-                display: flex;   
-                line-height: 48px;
-                margin-bottom: 24px;           
-                span {
-                    display: block;
-                    &:first-child {
-                        font-size: 48px;
-                        font-weight: 700;
-                        color: $text-black;
-                        margin-right: 5px;
-                    }
-                    &:last-child {
-                        font-size: 1em;
-                        color: $text-gray;
-                    }
-                }
-            }
         }
     }
 }

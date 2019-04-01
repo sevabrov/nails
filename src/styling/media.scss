@@ -74,13 +74,6 @@ $s: 670px;
                     }
                 }
             }
-            p.big-text {
-                span {
-                    &:first-child {
-                        font-size: 1.8em;
-                    }
-                }
-            }
         }
     }
     .business-creating-area {
@@ -160,11 +153,6 @@ $s: 670px;
                     }
 
                 }
-            }
-            p.big-text {
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 12px;
             }
             &--block {
                 width: 100%;
