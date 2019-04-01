@@ -76,8 +76,10 @@ class Review extends Component {
 
           return (
             <div className="content">
-                <ScrollAnimation animateIn="zoomIn" animateOnce={true} delay={200}>
+                <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={100}>
                     <h3 className="content-title no-margin">Вы в хороших руках</h3>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={300}>
                     <h5 className="content-sub-title">У нас размещаются только реальные отзывы пользователей системы</h5>
                     <Slider className="slider-block" {...settings}>
                     {this.feedback.map((item, index) => {

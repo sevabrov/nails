@@ -7,8 +7,10 @@ const Help = () => {
 
     return (
         <div className="content">
-            <ScrollAnimation animateIn="zoomIn" animateOnce={true} delay={200}> 
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={100}> 
                 <h3 className="content-title">Контроль над приемом в ваших руках</h3>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={300}>
                 <Tabs className="tab-menu">
                     <TabList>
                         <Tab className="study-menu">Таймлайн</Tab>

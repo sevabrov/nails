@@ -10,10 +10,10 @@ const Header =({handlePopUp}) => {
     return (
         <div className="header">
             <div className="main-content">
-                <div className="header-top">
-                    <img className="logo" src={logo} alt="logo"/>
-                </div>        
-                <ScrollAnimation animateIn="fadeInDown" animateOnce={true} delay={200}>          
+                <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={400}> 
+                    <div className="header-top">
+                            <img className="logo" src={logo} alt="logo"/>
+                    </div>                 
                     <SendEmail 
                         position = "header"
                         title = "Стань лучшим экспертом бьюти индустрии вместе с L&B."

@@ -9,7 +9,7 @@ const Footer = ({handlePopUp}) => {
             <div className="footer">
                 <div className="footer-form">
                     <div className="main-content">
-                        <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={200}>
+                        <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={300}>
                             <SendEmail 
                                 position = "footer"
                                 title = "Зарабатывай вместе с нами !"
