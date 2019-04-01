@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import axios from "axios";
 
+const server = 'https://lookandbeauty.herokuapp.com/leanding/invite';
+
 class SendEmail extends Component {     
 
     state = {
@@ -27,7 +29,21 @@ class SendEmail extends Component {
             axios.get('http://ip-api.com/json')
             .then(
                 response => {
-                    this.props.handlePopUp();
+                    const data = {
+                        'email': this.state.email,
+                        'ip': response.data.query,
+                        'city': response.data.city
+                    }
+                    axios.post(server, data)
+                    .then(
+                        response => {
+                            console.log('baki true',response.data)
+                        },
+                        error => {
+                            console.error('baki false',error.config)
+                        }
+                    )
+                    // this.props.handlePopUp();
                     console.log(this.state.email,response.data.query,response.data.city)
                 }, 
                 error => {

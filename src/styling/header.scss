@@ -1,6 +1,6 @@
 .header {
-    height: 100vh;
-    min-height: 600px;
+    height: 70vh;
+    min-height: 400px;
     width: 100%;
     background: #fc6dab;
     background-image: url('./img/header-bg.svg'); /* fallback */
@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     background-position: 100%;
     margin-bottom: 90px;
+    padding-bottom: 20px;
     &-top {
         display: flex;
         align-items: center;

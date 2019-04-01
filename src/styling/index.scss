@@ -50,12 +50,14 @@ a {
     box-shadow: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.8s;
-    &:hover,
-    &:focus {
-        box-shadow: inset 0 0 50px 30px #FF4965;
+    transition: all 0.3s;
+    &:hover{
+        background-color: #FFCFBB;
         color: #fff;
-        transition: all 0.8s;
+        transition: all 0.3s;
+    }
+    &:focus {
+        background-color: #0C1153;
     }
 }
 

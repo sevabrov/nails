@@ -16,7 +16,7 @@ const Header =({handlePopUp}) => {
                 <ScrollAnimation animateIn="fadeInDown" animateOnce={true} delay={200}>          
                     <SendEmail 
                         position = "header"
-                        title = "Зарабатывай на клиентах, получай реальные отзывы и будь в курсе всех новинок Бьюти индустрии вместе с L&B."
+                        title = "Стань лучшим экспертом бьюти индустрии вместе с L&B."
                         inputDesc = "Мы не передаём вашу почту третьим лицам и не рассылаем спам"
                         mobileView = {true}
                         handlePopUp = {handlePopUp}
