@@ -65,6 +65,9 @@ class SendEmail extends Component {
                             response => {
                                 console.log('baki true',response.data)
                                 this.handleLoader(false);
+                                this.setState({
+                                    email: ''
+                                })
                                 this.props.handlePopUp();
                             },
                             error => {
