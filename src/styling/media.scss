@@ -145,6 +145,9 @@ $s: 670px;
             line-height: 24px;
         }
         &-area {
+            h4 {
+                justify-content: center;
+            }
             .animated {
                 &:nth-child(2) {
                     text-align: center;
@@ -158,7 +161,7 @@ $s: 670px;
                 width: 100%;
                 max-width: 100%;
                 font-size: 9px;
-                text-align: center;
+                text-align: center!important;
                 margin-bottom: 60px;
             }
         }
