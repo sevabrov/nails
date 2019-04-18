@@ -13,10 +13,10 @@ const Header =({handlePopUp}) => {
                 <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={400}> 
                     <div className="header-top">
                             <img className="logo" src={logo} alt="logo"/>
-                    </div>                 
+                    </div>             
+                    <h1 className="header-title">Стань лучшим экспертом бьюти индустрии вместе с L&B.</h1>    
                     <SendEmail 
                         position = "header"
-                        title = "Стань лучшим экспертом бьюти индустрии вместе с L&B."
                         inputDesc = "Мы не передаём вашу почту третьим лицам и не рассылаем спам"
                         mobileView = {true}
                         handlePopUp = {handlePopUp}
