@@ -3,7 +3,7 @@ import SendEmail from './HOC/sendEmail';
 
 import ScrollAnimation from 'react-animate-on-scroll';
 
-const Footer = ({handlePopUp}) => {
+const Footer = ({handlePopUp, translateData}) => {
 
     return (
             <div className="footer">
@@ -12,8 +12,8 @@ const Footer = ({handlePopUp}) => {
                         <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={300}>
                             <SendEmail 
                                 position = "footer"
-                                title = "Зарабатывай вместе с нами !"
-                                inputDesc = "Это абсолютно бесплатно, стань первым кто присоедениться к большой семье мастеров. Никакого спама на вашу почту."                                
+                                title = {translateData.footerTitle}
+                                inputDesc = {translateData.footerText}                                
                                 handlePopUp = {handlePopUp}
                             />
                         </ScrollAnimation>
@@ -21,8 +21,8 @@ const Footer = ({handlePopUp}) => {
                 </div>
                 <div className="footer-link">
                     <div className="main-content">
-                        <a href="/">Главная</a>
-                        <a href="/">Пользовательское соглашение</a>
+                        <a href="/">{translateData.footerLinkMain}</a>
+                        <a href="/">{translateData.footerLinkTermsOfUse}</a>
                     </div>
                 </div>
             </div>

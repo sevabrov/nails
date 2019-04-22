@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import axios from "axios";
+
+import translateData from './Components/HOC/translate';
 
 
 //animation
@@ -19,7 +22,8 @@ import './styling/index.scss';
 class App extends Component {
 
   state = {
-    popUp: false        
+    popUp: false,
+    lang: 'rus'        
 }
 
   handlePopUp = () => {
@@ -33,18 +37,32 @@ class App extends Component {
     }, 3000)        
 }
 
-  render() {
+componentDidMount() {
+    axios.get('http://ip-api.com/json')
+    .then(response => {
+      if(response.data.countryCode === 'UA' || response.data.countryCode === 'RU') {
+        this.setState({
+          lang: 'rus'
+        })
+      }
+    })
+    .catch(error=> console.log(error))
+}
+
+
+
+  render() {    
     return (
-      <div className="main">       
-        <PopUp open={this.state.popUp}/>
-        <Header handlePopUp = {this.handlePopUp}/>
+      <div className="main">      
+        <PopUp open={this.state.popUp} translateData={this.state.lang === 'eng' ? translateData.eng : translateData.rus}/>
+        <Header handlePopUp = {this.handlePopUp} translateData={this.state.lang === 'eng' ? translateData.eng : translateData.rus}/>
         <div className="main-content">
-          <About/>
-          <What/>          
-          <Help/>
-          <Reviews/>
+          <About translateData={this.state.lang === 'eng' ? translateData.eng : translateData.rus}/>
+          <What translateData={this.state.lang === 'eng' ? translateData.eng : translateData.rus}/>          
+          <Help translateData={this.state.lang === 'eng' ? translateData.eng : translateData.rus}/>
+          <Reviews translateData={this.state.lang === 'eng' ? translateData.eng : translateData.rus}/>
         </div>
-        <Footer handlePopUp = {this.handlePopUp}/>
+        <Footer handlePopUp = {this.handlePopUp} translateData={this.state.lang === 'eng' ? translateData.eng : translateData.rus}/>
       </div>
     );
   }

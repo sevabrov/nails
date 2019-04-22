@@ -5,8 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import logo from '../styling/img/logo.png';
 
-const Header =({handlePopUp}) => {  
-
+const Header =({handlePopUp, translateData}) => {  
     return (
         <div className="header">
             <div className="main-content">
@@ -14,10 +13,10 @@ const Header =({handlePopUp}) => {
                     <div className="header-top">
                             <img className="logo" src={logo} alt="logo"/>
                     </div>             
-                    <h1 className="header-title">Стань лучшим экспертом бьюти индустрии вместе с L&B.</h1>    
+                    <h1 className="header-title">{translateData.headerTitle}</h1>    
                     <SendEmail 
                         position = "header"
-                        inputDesc = "Мы не передаём вашу почту третьим лицам и не рассылаем спам"
+                        inputDesc = {translateData.inputDesc}
                         mobileView = {true}
                         handlePopUp = {handlePopUp}
                     />

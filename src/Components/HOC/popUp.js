@@ -1,12 +1,12 @@
 import React from 'react';
 
-const PopUp = ({open}) => {
+const PopUp = ({open, translateData}) => {
     return (
             <div className={`modal-wrapper ${open ? "open" : ""}`}>
                 <div className="modal-area">
-                    <p className="modal-title">Готово!</p>
-                    <p className="modal-text">Будем держать Вас в курсе всех новостей а также вы первым узнаете о старте нащего сервиса)</p>
-                    <p className="modal-footer">Мы Вас не подведём!</p>
+                    <p className="modal-title">{translateData.popupReady}</p>
+                    <p className="modal-text">{translateData.popupText}</p>
+                    <p className="modal-footer">{translateData.popupFooter}</p>
                 </div>
             </div>
     );
