@@ -9,6 +9,7 @@
     "react": "^16.8.4",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.0",
     "react-scripts": "2.1.8",
     "react-slick": "^0.23.2",
     "react-tabs": "^3.0.0",
