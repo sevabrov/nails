@@ -19,6 +19,7 @@
     &-title {
         @include text(title);
         color: #fff;
+        text-align: center;
         margin-bottom: 30px;
     }    
     &-link {

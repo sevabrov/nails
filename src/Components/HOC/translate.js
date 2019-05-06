@@ -1,6 +1,6 @@
 let translateData = {
     rus: {
-        headerTitle: 'Стань лучшим экспертом бьюти индустрии вместе с L&B.',
+        headerTitle: 'Мы ищем мастеров маникюра и педикюра, в команду L&B',
         inputDesc: 'Мы не передаём вашу почту третьим лицам и не рассылаем спам',
         popupReady: 'Готово!',
         popupText: 'Будем держать Вас в курсе всех новостей а также вы первым узнаете о старте нащего сервиса)',
@@ -24,12 +24,12 @@ let translateData = {
         reviewsTitle: 'Вы в хороших руках',
         reviewsSubTitle: 'У нас размещаются только реальные отзывы пользователей системы',
         footerTitle: 'Зарабатывай вместе с нами!',
-        footerText: 'Это абсолютно бесплатно, стань первым кто присоедениться к большой семье мастеров. Никакого спама на вашу почту.',
+        footerText: 'Присоеденяйся к нам, и измени рынок бьюти индустрии Украины',
         footerLinkMain: 'Главная',
         footerLinkTermsOfUse: 'Пользовательское соглашение'
     },
     eng: {
-        headerTitle: 'Become the best beauty industry expert with L&B',
+        headerTitle: 'We are looking for manicure and pedicure masters for L&B team',
         inputDesc: 'We do not forward your email to third parties and do not send spam.',
         popupReady: 'Done!',
         popupText: 'We will keep you up to date with all the news and also you will be the first to know about the launch of our service.)',
@@ -53,7 +53,7 @@ let translateData = {
         reviewsTitle: 'You are in good hands',
         reviewsSubTitle: 'We have only real reviews of users of the system.',
         footerTitle: 'Earn with us!',
-        footerText: "It's absolutely free, be the first to join a large family of craftsmen. No spam to your mail.",
+        footerText: "Join us, and change the market of beauty industry in Ukraine",
         footerLinkMain: 'Main',
         footerLinkTermsOfUse: 'Terms of use'
     }

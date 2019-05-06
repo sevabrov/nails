@@ -13,11 +13,13 @@ const Header =({handlePopUp, translateData}) => {
                     <div className="header-top">
                             <img className="logo" src={logo} alt="logo"/>
                     </div>             
-                    <h1 className="header-title">{translateData.headerTitle}</h1>    
+                    <h1 className="header-title">
+                        <span>{translateData.headerTitle}</span>   
+                        <span className="mob-view">Зарабатывай на клиентах вместе с L&B.</span> 
+                    </h1>   
                     <SendEmail 
                         position = "header"
                         inputDesc = {translateData.inputDesc}
-                        mobileView = {true}
                         handlePopUp = {handlePopUp}
                     />
                 </ScrollAnimation>

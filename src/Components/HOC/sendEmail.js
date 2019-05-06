@@ -90,16 +90,13 @@ class SendEmail extends Component {
     }
 
     render() {
-        const {position, inputDesc, title, mobileView} = this.props;
+        const {inputDesc} = this.props;
         return(
-            <form onSubmit={this.sendEmail}>         
-                <h1 className={`${position}-title`}>{title}</h1>
-                {mobileView ? <h1 className="header-title mob-view">Зарабатывай на клиентах вместе с L&B.</h1> : null}
-                {/* <p className="input-text">Нам доверяют более 200 000 экспертов по всему миру</p> */}
+            <form onSubmit={this.sendEmail}>                 
                 <div className={`input ${this.state.emailError ? 'error' : ''}`}>
                     <div className="error-message">{this.state.errorText}</div>
                     <input type="text" value={this.state.email} onChange={this.handleEmail} placeholder="Оставьте ваш e-mail"/>
-                    <button className={`start-btn ${this.state.loader ? 'loader' : ''}`}>Начать Сейчас</button>
+                    <button className={`start-btn ${this.state.loader ? 'loader' : ''}`}>Присоединиться</button>
                 </div>
                 <p className="input-desc">{inputDesc}</p>
             </form>
