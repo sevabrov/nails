@@ -10,7 +10,7 @@ const Footer = ({handlePopUp, translateData}) => {
                 <div className="footer-form">
                     <div className="main-content">
                         <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay={300}>                                       
-                            <h1 className="footer-title">{translateData.footerTitle}</h1>  
+                            <h2 className="footer-title">{translateData.footerTitle}</h2>  
                             <SendEmail 
                                 position = "footer"
                                 inputDesc = {translateData.footerText}                                
